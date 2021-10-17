@@ -84,7 +84,7 @@ const Withdraw = () => {
         document.getElementById('withdraw-btn').disabled = false;
       });
 
-    setStatus('$' + parseFloat(withdraw) + ' withdrawed to your balance');
+    setStatus('$' + parseFloat(withdraw) + ' withdrawed from your balance');
 
     setWithdraw('');
   }
