@@ -46,7 +46,7 @@ const Withdraw = () => {
     if (!validate(withdraw)) return;
 
     await axios({
-      url: 'http://localhost:4000/graphql',
+      url: '/graphql',
       method: 'post',
       headers: {
         'Content-Type': 'application/json',
