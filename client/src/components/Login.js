@@ -2,7 +2,6 @@ import axios from 'axios';
 import { useContext, useState } from 'react';
 import { Card, BankFormInput, BankFormButton } from './Cards';
 import UserContext from '../contexts/user-context';
-import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [status, setStatus] = useState('');
@@ -126,9 +125,7 @@ const Login = () => {
               value={user.password}
               onChange={(e) => setUser({ ...user, password: e.currentTarget.value })}
             />
-            <Link to="/home">
-              <BankFormButton id="login-btn" bgcolor="warning" text="Login" onClick={handleLogin} />
-            </Link>
+            <BankFormButton id="login-btn" bgcolor="warning" text="Login" onClick={handleLogin} />
           </>
         ) : (
           <>
