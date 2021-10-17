@@ -8,7 +8,10 @@ import schema from './graphql/schema.js';
 import userResolvers from './graphql/user.js';
 import isAuth from './middleware/isAuth.js';
 
-dotenv.config();
+import path from 'path';
+const __dirname = path.resolve();
+
+dotenv.config({ path: './config.env' });
 
 const app = express();
 
@@ -30,6 +33,17 @@ app.use(
     graphiql: true,
   })
 );
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '/client/build')));
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+  });
+} else {
+  app.get('/', (req, res) => {
+    res.send('API running...');
+  });
+}
 
 const PORT = process.env.PORT || 4000;
 
