@@ -6,16 +6,18 @@ function Card(props) {
   }
 
   return (
-    <div className="card mb-3" style={{ maxWidth: '18rem' }}>
-      <div className={headerStyle()}>{props.header}</div>
-      <div className="card-body bg-light">
-        {props.title && <h5 className="card-title">{props.title}</h5>}
-        {props.text && <p className="card-text">{props.text}</p>}
-        {props.text1 && <p className="card-text">{props.text1}</p>}
-        {props.text2 && <p className="card-text">{props.text2}</p>}
-        {props.text3 && <p className="card-text">{props.text3}</p>}
-        {props.body}
-        {props.status && <div id="createStatus">{props.status}</div>}
+    <div className="mx-auto">
+      <div className="card mb-3" style={{ maxWidth: '18rem' }}>
+        <div className={headerStyle()}>{props.header}</div>
+        <div className="card-body bg-light">
+          {props.title && <h5 className="card-title">{props.title}</h5>}
+          {props.text && <p className="card-text">{props.text}</p>}
+          {props.text1 && <p className="card-text">{props.text1}</p>}
+          {props.text2 && <p className="card-text">{props.text2}</p>}
+          {props.text3 && <p className="card-text">{props.text3}</p>}
+          {props.body}
+          {props.status && <div id="createStatus">{props.status}</div>}
+        </div>
       </div>
     </div>
   );
