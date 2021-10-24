@@ -6,7 +6,7 @@ function Card(props) {
   }
 
   return (
-    <div className="card mb-3" style={{ maxWidth: '18rem' }}>
+    <div className="card mb-3 card-pos">
       <div className={headerStyle()}>{props.header}</div>
       <div className="card-body bg-light">
         {props.title && <h5 className="card-title">{props.title}</h5>}

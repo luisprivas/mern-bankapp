@@ -12,6 +12,8 @@ import NotFound from './components/NotFound';
 
 import UserContext from './contexts/user-context';
 
+import './styles/styles.css';
+
 const App = () => {
   const [authUser, setAuthUser] = useState({
     userId: null,

@@ -15,7 +15,7 @@ const Home = () => {
           ? 'Navigate to the deposit or withdraw pages.'
           : 'Begin by creating an account or logging in.'
       }
-      body={<img src="bank.png" className="img-fluid" alt="Bank"></img>}
+      body={<img src="bank.png" className="img-fluid center-image" alt="Bank"></img>}
     />
   );
 };
